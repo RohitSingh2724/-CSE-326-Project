@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles1.css">
+  <title>Digital Library</title>
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #f0f4f8, #e8f0fe);
+      color: #333;
+    }
+
+    /* header {
+          background-color: #6a5acd;
+          color: #fff;
+          padding: 20px;
+          text-align: center;
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+          position: relative;
+      } */
+    .search-container {
+      margin: 10px 0;
+    }
+
+    .search-container input[type="text"] {
+      padding: 10px;
+      width: 300px;
+      border: none;
+      border-radius: 5px;
+      outline: none;
+    }
+
+    .search-container button {
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      background-color: #ffcc00;
+      color: #333;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .search-container button:hover {
+      background-color: #ff7b00;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #e0f7fa, #b2ebf2);
+      color: #333;
+    }
+
+    header {
+      background-color: #00796b;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    nav {
+      margin: 20px 0;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffcc00;
+    }
+
+    .search-container {
+      margin: 20px auto;
+      text-align: center;
+    }
+
+    .search-input {
+      padding: 10px;
+      width: 300px;
+      border: 2px solid #00796b;
+      border-radius: 5px;
+      font-size: 1em;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .genre {
+      background-color: #fff;
+      border-radius: 10px;
+      margin: 15px;
+      padding: 20px;
+      width: 280px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s, box-shadow 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .genre:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .genre h2 {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+      color: #00796b;
+    }
+
+    .genre p {
+      font-size: 0.9em;
+      color: #555;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #00796b;
+      color: #fff;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+      box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .recommendations {
+      display: none;
+      /* Hide recommendations by default */
+      margin-top: 10px;
+      font-size: 0.85em;
+      color: #00796b;
+    }
+
+    .genre:hover .recommendations {
+      display: block;
+      /* Show recommendations on hover */
+    }
+
+
+    .book {
+      font-weight: bold;
+      margin: 5px 0;
+    }
+
+    .author {
+      font-style: italic;
+      color: #555;
+    }
+
+    .overview {
+      font-size: 0.8em;
+      color: #666;
+    }
+
+    @media (max-width: 600px) {
+      .genre {
+        width: 90%;
+      }
+
+      .search-input {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Digital Library</h1>
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="booking.html">Booking</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="search-container">
+      <input type="text" placeholder="Search for books...">
+      <button type="submit">Search</button>
+    </div>
+  </header>
+
+  <main>
+    <h2></h2>
+    <p></p>
+    <div class="search-container">
+      <input type="text" id="search" class="search-input" placeholder="Search genres..." onkeyup="filterGenres()">
+    </div>
+
+    <div class="container" id="genreContainer">
+      <div class="genre" id="fantasy">
+        <h2>Fantasy</h2>
+        <p>Explore magical realms and epic adventures.</p>
+        <div class="recommendations">
+          <strong>Recommended:</strong><br>
+          <span class="book">The Hobbit</span> <span class="author">by J.R.R. Tolkien</span><br>
+          <span class="overview">A hobbit's adventure through Middle-earth filled with dragons and treasure.</span><br>
+          <span class="book">Harry Potter and the Sorcerer's Stone</span> <span class="author">by J.K.
+            Rowling</span><br>
+          <span class="overview">A young boy discovers he's a wizard and attends Hogwarts School of Witchcraft and
+            Wizardry.</span><br>
+          <span class="book">A Court of Thorns and Roses</span> <span class="author">by Sarah J. Maas</span><br>
+          <span class="overview">A Beauty and the Beast retelling set in a world of fae and magic.</span>
+        </div>
+      </div>
+
+      <div class="genre" id="action">
+        <h2>Action</h2>
+        <p>Fast-paced thrills and heart-pounding excitement.</p>
+        <div class="recommendations">
+          <strong>Recommended:</strong><br>
+          <span class="book">The Hunger Games</span> <span class="author">by Suzanne Collins</span><br>
+          <span class="overview">In a dystopian future, a girl fights for survival in a deadly televised
+            competition.</span><br>
+          <span class="book">Die Hard</span> <span class="author">by Roderick Thorp</span><br>
+          <span class="overview">A New York cop battles terrorists in a Los Angeles skyscraper.</span><br>
+          <span class="book">The Maze Runner</span> <span class="author">by James Dashner</span><br>
+          <span class="overview">A group of teens navigates a deadly maze in a mysterious world.</span>
+        </div>
+      </div>
+
+      <div class="genre" id="historical">
+        <h2>Historical</h2>
+        <p>Dive into the past and uncover captivating stories.</p>
+        <div class="recommendations">
+          <strong>Recommended:</strong><br>
+          <span class="book">The Book Thief</span> <span class="author">by Markus Zusak</span><br>
+          <span class="overview">A young girl in Nazi Germany finds solace by stealing books and sharing them with
+            others.</span><br>
+          <span class="book">All the Light We Cannot See</span> <span class="author">by Anthony Doerr</span><br>
+          <span class="overview">Two children during World War II whose paths cross amidst the chaos.</span><br>
+          <span class="book">The Nightingale</span> <span class="author">by Kristin Hannah</span><br>
+          <span class="overview">The story of two sisters in France during World War II and their struggle for
+            survival.</span>
+        </div>
+      </div>
+
+      <div class="genre" id="comedy">
+        <h2>Comedy</h2>
+        <p>Lighten your mood with laughter and fun.</p>
+        <div class="recommendations">
+          <strong>Recommended:</strong><br>
+          <span class="book">Good Omens</span> <span class="author">by Neil Gaiman and Terry Pratchett</span><br>
+          <span class="overview">An angel and a demon team up to prevent the apocalypse.</span><br>
+          <span class="book">Bossypants</span> <span class="author">by Tina Fey</span><br>
+          <span class="overview">Tina Fey's hilarious memoir about her life and career.</span><br>
+          <span class="book">The Hitchhiker's Guide to the Galaxy</span> <span class="author">by Douglas
+            Adams</span><br>
+          <span class="overview">A comedic adventure through space and time with an unwitting earthling.</span>
+        </div>
+      </div>
+
+      <div class="genre" id="sci-fi">
+        <h2>Sci-Fi</h2>
+        <p>Explore futuristic worlds and scientific wonders.</p>
+        <div class="recommendations">
+          <strong>Recommended:</strong><br>
+          <span class="book">Dune</span> <span class="author">by Frank Herbert</span><br>
+          <span class="overview">A young man navigates political intrigue on a desert planet.</span><br>
+          <span class="book">Neuromancer</span> <span class="author">by William Gibson</span><br>
+          <span class="overview">A washed-up computer hacker is hired for one last job: to pull off the ultimate
+            hack.</span><br>
+          <span class="book">Ender's Game</span> <span class="author">by Orson Scott Card</span><br>
+          <span class="overview">A gifted child is trained in a military school to prepare for an alien invasion.</span>
+        </div>
+      </div>
+
+      <div class="genre" id="thriller">
+        <h2>Thriller</h2>
+        <p>Gripping tales that will keep you on the edge of your seat.</p>
+        <div class="recommendations">
+          <strong>Recommended:</strong><br>
+          <span class="book">Gone Girl</span> <span class="author">by Gillian Flynn</span><br>
+          <span class="overview">A woman's mysterious disappearance reveals troubling secrets about her
+            marriage.</span><br>
+          <span class="book">The Girl with the Dragon Tattoo</span> <span class="author">by Stieg Larsson</span><br>
+          <span class="overview">A journalist and a hacker uncover dark family secrets.</span><br>
+          <span class="book">The Silent Patient</span> <span class="author">by Alex Michaelides</span><br>
+          <span class="overview">A psychotherapist becomes obsessed with a patient who refuses to speak after committing
+            a
+            crime.</span>
+        </div>
+      </div>
+
+      <div class="genre" id="mystery">
+        <h2>Mystery</h2>
+        <p>Unravel secrets and solve intriguing puzzles.</p>
+        <div class="recommendations">
+          <strong>Recommended:</strong><br>
+          <span class="book">The Da Vinci Code</span> <span class="author">by Dan Brown</span><br>
+          <span class="overview">A symbologist uncovers secrets hidden in Da Vinci's works.</span><br>
+          <span class="book">Big Little Lies</span> <span class="author">by Liane Moriarty</span><br>
+          <span class="overview">A murder investigation reveals secrets among a group of mothers.</span><br>
+          <span class="book">The Woman in the Window</span> <span class="author">by A.J. Finn</span><br>
+          <span class="overview">An agoraphobic woman believes she witnessed a crime in her neighbor's house.</span>
+        </div>
+      </div>
+
+      <div class="genre" id="horror">
+        <h2>Horror</h2>
+        <p>Face your fears with chilling tales and suspense.</p>
+        <div class="recommendations">
+          <strong>Recommended:</strong><br>
+          <span class="book">It</span> <span class="author">by Stephen King</span><br>
+          <span class="overview">A group of children confront a malevolent entity that takes the form of a
+            clown.</span><br>
+          <span class="book">The Shining</span> <span class="author">by Stephen King</span><br>
+          <span class="overview">A family becomes trapped in a haunted hotel.</span><br>
+          <span class="book">Bird Box</span> <span class="author">by Josh Malerman</span><br>
+          <span class="overview">In a post-apocalyptic world, a mother must navigate to safety while blindfolded.</span>
+        </div>
+      </div>
+
+      <div class="genre" id="educational">
+        <h2>Educational</h2>
+        <p>Expand your knowledge with insightful resources.</p>
+        <div class="recommendations">
+          <strong>Recommended:</strong><br>
+          <span class="book">Sapiens: A Brief History of Humankind</span> <span class="author">by Yuval Noah
+            Harari</span><br>
+          <span class="overview">An exploration of human history and the evolution of societies.</span><br>
+          <span class="book">Educated</span> <span class="author">by Tara Westover</span><br>
+          <span class="overview">A memoir about a woman's quest for knowledge despite her isolated
+            upbringing.</span><br>
+          <span class="book">The Immortal Life of Henrietta Lacks</span> <span class="author">by Rebecca
+            Skloot</span><br>
+          <span class="overview">The story of a woman whose cells were used for groundbreaking medical research.</span>
+        </div>
+      </div>
+
+      <div class="genre" id="slice-of-life">
+        <h2>Slice of Life</h2>
+        <p>Relatable stories reflecting everyday experiences.</p>
+        <div class="recommendations">
+          <strong>Recommended:</strong><br>
+          <span class="book">Eleanor Oliphant Is Completely Fine</span> <span class="author">by Gail Honeyman</span><br>
+          <span class="overview">A socially awkward woman's life changes when she starts to open up to
+            others.</span><br>
+          <span class="book">A Man Called Ove</span> <span class="author">by Fredrik Backman</span><br>
+          <span class="overview">A grumpy old man finds unexpected friendships that change his outlook on
+            life.</span><br>
+          <span class="book">The Perks of Being a Wallflower</span> <span class="author">by Stephen Chbosky</span><br>
+          <span class="overview">A coming-of-age story that captures the highs and lows of adolescence.</span>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="script1.js"></script>
+
+  <footer class="footer">
+    <div class="container">
+      <!-- Footer Sections -->
+      <div class="footer-content">
+        <!-- Quick Links Section -->
+        <div class="footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="digital-library.html">Digital Library</a></li>
+            <li><a href="Booking.html">Booking</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Information Section -->
+        <div class="footer-contact">
+          <h3>Contact Information</h3>
+          <p>Email: <a href="mailto:ohara@onepiece.in">ohara@onepiece.in</a></p>
+          <p>Phone: <a href="tel:+91798415XXXX">+91798415XXXX </a></p>
+          <p>Address: Delhi-GT Road ,Phagwara, Jalandhar,Punjab </p>
+        </div>
+
+        <!-- Social Media Section -->
+        <div class="footer-social">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="https://facebook.com" target="_blank"><img src="Images/facebook_icon_137647.png"
+                alt="Facebook"></a>
+            <a href="https://twitter.com" target="_blank"><img src="Images/twitter.png" alt="Twitter"></a>
+            <a href="https://instagram.com" target="_blank"><img src="Images/instagram-black_100099.png"
+                alt="Instagram"></a>
+            <a href="https://youtube.com" target="_blank"><img src="Images/youtube.png" alt="Instagram"></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 <a href="home.html">Ohara Library</a>. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

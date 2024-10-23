@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles1.css">
+    <title>Library Home</title>
+    <style>
+        .one {
+            text-decoration: none;
+            color: black;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f88f8f;
+            color: #495057;
+        }
+
+        h3 {
+            font-size: 3.5em;
+            margin: 0;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        h3 {
+            color: #4CAF50;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 2.2em;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin: 15px 0;
+            position: relative;
+            padding-left: 25px;
+            font-size: 1.1em;
+        }
+
+        ul li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            color: #4CAF50;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            margin-top: 15px;
+            border: 2px solid #f4f4f4;
+            transition: transform 0.3s;
+        }
+
+        img:hover {
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 600px) {
+            div {
+                margin: 10px;
+            }
+
+            h3 {
+                font-size: 1.8em;
+            }
+        }
+
+        .a p {
+            color: black;
+        }
+
+        .a h2 {
+            color: #495057
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            margin-top: 20px;
+        }
+
+        .book-info {
+            flex: 1;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .author-info {
+            flex: 1;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        header h2 img {
+            width: 25px;
+            height: 27px;
+            filter: brightness(0) invert(1);
+            transition: transform 0.8s ease;
+        }
+        header h2{
+            font-size:xx-large;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Ohara</h1>
+        <h2><img src="Images/R (1).png" alt=""> Tree of Knowledge <img src="Images/R (1).png" alt=""></h2>
+
+        <nav>
+            <ul>
+                <li><a href="digital-library.html">Digital Library</a></li>
+                <li><a href="booking.html">Booking</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="a">
+            <div class="container">
+                <div class="book-info">
+                    <h2>One Piece</h2>
+                    <img src="Images/one-piece-4k-cover-art-ncfciduqxhppiukm.jpg" alt="Book Cover">
+                </div>
+
+                <div class="author-info">
+                    <h2>About the Author</h2>
+                    <img src="Images/biographie_eiichiro_oda_createur_de_one_piece.webp" alt="Eiichiro Oda">
+                    <p><strong>Name:</strong>Eiichiro Oda</p>
+                    <p>Eiichiro Oda is a Japanese manga artist best known for creating the immensely popular manga
+                        series <em>One Piece</em>. Born on January 1, 1975, in Kumamoto, Japan, Oda began drawing at a
+                        young age and published his first manga work at just 17. <em>One Piece</em>, which started
+                        serialization in 1997, follows the adventures of Monkey D. Luffy and his pirate crew as they
+                        search for the ultimate treasure known as the "One Piece." The series has gained worldwide
+                        acclaim for its imaginative storytelling, rich world-building, and diverse cast of characters,
+                        making Oda one of the most successful and influential manga artists in history..</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="grid-container">
+                <div class="grid-item">
+                    <img src="Images/wallpaperflare.com_wallpaper (5).jpg" alt="Community Event">
+                    <h3>Community Events</h3>
+                    <p>Join Us for Exciting Activities!</p>
+                    <p>
+                        At <mark><b>Ohara</b></mark>, we believe in fostering community connections through
+                        engaging events. Whether
+                        you're
+                        looking for educational workshops, fun activities for kids, or informative talks, there's
+                        something
+                        for
+                        everyone!
+                    </p>
+                    <ul>
+                        <li>
+                            <strong>Upcoming Events:</strong><br> Check our calendar for storytimes, book clubs, author
+                            visits,
+                            and
+                            cultural celebrations.
+                        </li>
+                        <li>
+                            <strong>Workshops and Classes:</strong><br> Learn new skills, from technology tutorials to
+                            arts and
+                            crafts
+                            sessions.
+                        </li>
+                        <li>
+                            <strong>Community Partnerships:</strong><br> We collaborate with local organizations to
+                            bring
+                            diverse programs
+                            to our community.
+                        </li>
+                    </ul>
+                </div>
+                <div class="grid-item">
+                    <img src="Images/wallpaperflare.com_wallpaper.jpg" alt="Extensive Collection" />
+                    <h3>Extensive Collection</h3>
+                    <p>Discover Your Next Great Read!</p>
+                    <p>
+                        Our extensive collection is designed to meet the needs of every patron. With thousands of titles
+                        across
+                        various genres, we provide access to:
+                    </p>
+                    <ul>
+                        <li>
+                            <strong>Books:</strong><br> From bestsellers to hidden gems, our collection includes
+                            fiction,
+                            non-fiction,
+                            biographies, and more.
+                        </li>
+                        <li>
+                            <strong>Audiobooks & E-Books:</strong><br> Enjoy reading on the go with our digital
+                            collection
+                            available for
+                            download.
+                        </li>
+                        <li>
+                            <strong>Special Collections:</strong><br> Explore our local history archives, rare books,
+                            and
+                            multimedia
+                            resources.
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="grid-item">
+                    <img src="Images/wallpaperflare.com_wallpaper (12).jpg" alt="Online Booking" />
+                    <h3><a href="Booking.html" class="one">Online Booking</a></h3>
+                    <p>Reserve Your Spot!</p>
+                    <p>
+                        Make the most of your library experience with our online booking system. Whether you want to
+                        reserve
+                        a study
+                        room, sign up for a workshop, or register for a special event, it’s easy and convenient!
+                    </p>
+                    <ul>
+                        <li>
+                            <strong>Study Rooms:</strong><br> Quiet spaces available for individual or group study.
+                        </li>
+                        <li>
+                            <strong>Event Registration:</strong><br> Secure your spot for workshops and programs
+                            directly
+                            through our
+                            website.
+                        </li>
+                        <li>
+                            <strong>Resource Reservations:</strong><br> Reserve materials like laptops or equipment for
+                            use
+                            during your
+                            visit.
+                        </li>
+                    </ul>
+                </div>
+                <div class="grid-item">
+                    <img src="Images/wallpaperflare.com_wallpaper (9).jpg" alt="Digital Library" />
+                    <h3><a href="digital-library.html" class="b">Explore Our Digital Library</a></h3>
+                    <p>Your Library, Anywhere, Anytime!</p>
+                    <p>
+                        Our digital library offers a wealth of resources at your fingertips. With just a few clicks, you
+                        can
+                        access a
+                        wide range of materials, including:
+                    </p>
+                    <ul>
+                        <li>
+                            <strong>E-Books and Audiobooks:</strong><br> Borrow popular titles instantly through our
+                            digital
+                            platforms.
+                        </li>
+                        <li>
+                            <strong>Online Databases:</strong><br> Research articles, journals, and newspapers available
+                            24/7.
+                        </li>
+                        <li>
+                            <strong>Educational Resources:</strong><br> Access learning tools and courses to enhance
+                            your
+                            skills.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="digital-library.html">Digital Library</a></li>
+                        <li><a href="Booking.html">Booking</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h3>Contact Information</h3>
+                    <p>Email: <a href="mailto:ohara@onepiece.in">ohara@onepiece.in</a></p>
+                    <p>Phone: <a href="tel:+91798415XXXX">+91798415XXXX </a></p>
+                    <p>Address: Delhi-GT Road ,Phagwara, Jalandhar,Punjab </p>
+                </div>
+                <div class="footer-social">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="https://facebook.com" target="_blank"><img src="Images/facebook_icon_137647.png"
+                                alt="Facebook"></a>
+                        <a href="https://twitter.com" target="_blank"><img src="Images/twitter.png" alt="Twitter"></a>
+                        <a href="https://instagram.com" target="_blank"><img src="Images/instagram-black_100099.png"
+                                alt="Instagram"></a>
+                        <a href="https://youtube.com" target="_blank"><img src="Images/youtube.png" alt="YouTube"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 <a href="home.html">Ohara Library</a>. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

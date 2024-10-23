@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book a Book</title>
+  <link rel="stylesheet" href="styles1.css">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #e1bee7, #d1c4e9);
+      color: #333;
+    }
+
+    header {
+      background: #6a1b9a;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: calc(100vh - 120px);
+    }
+
+    .booking-card {
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+      max-width: 400px;
+      width: 90%;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+
+    .booking-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .booking-card h2 {
+      margin-bottom: 20px;
+      color: #6a1b9a;
+      font-size: 1.8em;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    form label {
+      margin: 10px 0 5px;
+      text-align: left;
+      font-weight: bold;
+    }
+
+    form input {
+      padding: 12px;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      transition: border-color 0.3s;
+    }
+
+    form input:focus {
+      border-color: #6a1b9a;
+      outline: none;
+    }
+
+    form button {
+      background: #43a047;
+      border: none;
+      padding: 12px;
+      cursor: pointer;
+      border-radius: 8px;
+      font-size: 1em;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    form button:hover {
+      background: #388e3c;
+      transform: translateY(-2px);}
+  </style>
+</head>
+
+<body>
+  <header>
+      <h1>Library Booking System</h1>
+      <nav>
+          <ul>
+              <li><a href="home.html">Home</a></li>
+              <li><a href="digital-library.html">Digital Library</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact</a></li>
+          </ul>
+      </nav>
+  </header>
+
+  <main>
+    <div class="booking-card">
+      <h2>Book a Book</h2>
+      <form id="booking-form">
+        <label for="book-title">Book Title:</label>
+        <input type="text" id="book-title" name="book-title" placeholder="Enter the book title" required>
+
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+        <label for="date">Booking Date:</label>
+        <input type="date" id="date" name="date" required>
+
+        <button type="submit">Book Now</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <footer class="footer">
+      <div class="container">
+        <!-- Footer Sections -->
+        <div class="footer-content">
+          <!-- Quick Links Section -->
+          <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="home.html">Home</a></li>
+              <li><a href="digital-library.html">Digital Library</a></li>
+              <li><a href="Booking.html">Booking</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact Information Section -->
+          <div class="footer-contact">
+            <h3>Contact Information</h3>
+            <p>Email: <a href="mailto:ohara@onepiece.in">ohara@onepiece.in</a></p>
+            <p>Phone: <a href="tel:+91798415XXXX">+91798415XXXX </a></p>
+            <p>Address: Delhi-GT Road ,Phagwara, Jalandhar,Punjab </p>
+          </div>
+
+          <!-- Social Media Section -->
+          <div class="footer-social">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+              <a href="https://facebook.com" target="_blank"><img src="Images/facebook_icon_137647.png"
+                  alt="Facebook"></a>
+              <a href="https://twitter.com" target="_blank"><img src="Images/twitter.png" alt="Twitter"></a>
+              <a href="https://instagram.com" target="_blank"><img src="Images/instagram-black_100099.png"
+                  alt="Instagram"></a>
+              <a href="https://youtube.com" target="_blank"><img src="Images/youtube.png" alt="Instagram"></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2024 <a href="home.html"></a>. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+</body>
+
+</html>

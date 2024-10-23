@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles1.css">
+    <title>Contact Us</title>
+    <style>
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light text color */
+    margin: 0;
+    padding: 0;
+}
+
+.contact-main {
+    padding: 40px;
+    max-width: 700px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.contact-card {
+    background: #1e1e1e; /* Darker card background */
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    padding: 30px;
+}
+
+.contact-title {
+    font-size: 2.5em;
+    color: #bb86fc; /* Light purple color */
+    margin-bottom: 15px;
+}
+
+.contact-intro {
+    font-size: 1.1em;
+    color: #b0bec5; /* Light gray for intro text */
+    margin-bottom: 25px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: left;
+}
+
+.form-input,
+.form-textarea {
+    padding: 12px;
+    border: 1px solid #333; /* Darker border */
+    border-radius: 8px;
+    font-size: 1em;
+    background: #424242; /* Dark input background */
+    color: #e0e0e0; /* Light text for inputs */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+    border-color: #bb86fc; /* Light purple on focus */
+    box-shadow: 0 0 5px rgba(187, 134, 252, 0.5);
+    outline: none;
+}
+
+.form-button {
+    padding: 12px;
+    background-color: #bb86fc; /* Button color */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.form-button:hover {
+    background-color: #9a67e8; /* Darker purple on hover */
+    transform: translateY(-2px);
+}
+
+.contact-alternatives {
+    font-size: 1.8em;
+    color: #bb86fc; /* Same light purple */
+    margin-top: 30px;
+}
+
+.contact-info {
+    list-style-type: none;
+    padding: 0;
+    color: #b0bec5; /* Light gray for info text */
+}
+
+.contact-info li {
+    margin: 8px 0;
+}
+
+.contact-info a {
+    color: #bb86fc; /* Matching link color */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #9a67e8; /* Darker shade on link hover */
+}
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Contact Us</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="digital-library.html">Digital Library</a></li>
+                <li><a href="booking.html">Booking</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contact-main">
+      <div class="contact-card">
+          <h2 class="contact-title">We'd Love to Hear from You!</h2>
+          <p class="contact-intro">Fill out the form below, and our team will get back to you shortly.</p>
+          
+          <form method="post" class="contact-form">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required class="form-input">
+  
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required class="form-input">
+  
+              <label for="message">Message:</label>
+              <textarea id="message" name="message" rows="4" required class="form-textarea"></textarea>
+  
+              <button type="submit" class="form-button">Send Message</button>
+          </form>
+      </div>
+      
+      <h3 class="contact-alternatives">Other Ways to Reach Us</h3>
+      <p>If you prefer direct contact, you can reach us via:</p>
+      <ul class="contact-info">
+          <li>Email: <a href="mailto:ohara@onepiece.in">ohara@onepiece.in</a></li>
+          <li>Phone: <a href="tel:+91798415XXXX">+91798415XXXX</a></li>
+      </ul>
+  </main>
+  
+    
+    <footer class="footer">
+        <div class="container">
+          <!-- Footer Sections -->
+          <div class="footer-content">
+            <!-- Quick Links Section -->
+            <div class="footer-links">
+              <h3>Quick Links</h3>
+              <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="digital-library.html">Digital Library</a></li>
+                <li><a href="Booking.html">Booking</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </div>
+    
+            <!-- Contact Information Section -->
+            <div class="footer-contact">
+              <h3>Contact Information</h3>
+              <p>Email: <a href="mailto:ohara@onepiece.in">ohara@onepiece.in</a></p>
+              <p>Phone: <a href="tel:+91798415XXXX">+91798415XXXX </a></p>
+              <p>Address: Delhi-GT Road ,Phagwara, Jalandhar,Punjab </p>
+            </div>
+    
+            <!-- Social Media Section -->
+            <div class="footer-social">
+              <h3>Follow Us</h3>
+              <div class="social-icons">
+                <a href="https://facebook.com" target="_blank"><img src="Images/facebook_icon_137647.png"
+                    alt="Facebook"></a>
+                <a href="https://twitter.com" target="_blank"><img src="Images/twitter.png" alt="Twitter"></a>
+                <a href="https://instagram.com" target="_blank"><img src="Images/instagram-black_100099.png"
+                    alt="Instagram"></a>
+                <a href="https://youtube.com" target="_blank"><img src="Images/youtube.png" alt="Instagram"></a>
+              </div>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <p>© 2024 <a href="home.html">Ohara Library</a>. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+</body>
+</html>

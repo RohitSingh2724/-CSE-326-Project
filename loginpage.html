@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Register</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: white;
+            border-radius: 9px;
+            box-shadow: -5px 5px 15px rgb(0, 0, 0);
+            width: 300px;
+            padding: 20px;
+            background: transparent;
+        }
+
+        .form-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form.hidden {
+            display: none;
+        }
+
+        input {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid burlywood;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: rgb(16, 225, 44);
+        }
+
+        p {
+            text-align: center;
+        }
+
+        span {
+            color: rgb(121, 66, 66);
+            cursor: pointer;
+        }
+
+        span:hover {
+            text-decoration: underline;
+            color: rgb(16, 225, 44);
+        }
+
+        body {
+            background-image: url(Images/wallpaperflare.com_wallpaper\ \(78\).jpg);
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-container">
+            <form id="login-form" class="form">
+                <h2>Login</h2>
+                <input type="text" placeholder="Username" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+                <p>Don't have an account? <span id="switch-to-register">Register here</span></p>
+            </form>
+
+            <form id="register-form" class="form hidden">
+                <h2>Register</h2>
+                <input type="text" placeholder="Username" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit">Register</button>
+                <p>Already have an account? <span id="switch-to-login">Login here</span></p>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

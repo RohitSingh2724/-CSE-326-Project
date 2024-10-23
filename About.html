@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles1.css">
+    <title>About Us</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #1a1a1a, #333);
+            color: #f1f1f1;
+        }
+
+        header {
+            background-color: #444;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #f8f8f8;
+            transform: scale(1.1);
+        }
+
+        main {
+            padding: 40px;
+            max-width: 1000px;
+            margin: auto;
+            background: rgba(50, 50, 50, 0.9);
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        section {
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #ff7863;
+            border-bottom: 2px solid #ffbb63;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            font-size: 1.8em;
+            text-shadow: 1px 1px 2px rgba(226, 221, 214, 0.5);
+        }
+
+        .qwe {
+            background: #222;
+            border-left: 5px solid #4c4c51;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 10px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .team-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .team-member {
+            flex: 1 1 calc(22% - 20px);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            background: #333;
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .team-member:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+        }
+
+        .team-member img {
+            width: 150px;
+            border-radius: 10px;
+            border: 2px solid #515157;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s;
+        }
+
+        .team-member:hover img {
+            transform: scale(1.1);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #444;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .quote {
+            font-style: italic;
+            text-align: center;
+            margin: 20px 0;
+            font-size: 1.2em;
+            color: #ddd;
+        }
+
+        @media (max-width: 800px) {
+            .team-member {
+                flex: 1 1 calc(45% - 20px); /* Two members per row on smaller screens */
+            }
+        }
+
+        @media (max-width: 500px) {
+            .team-member {
+                flex: 1 1 100%; /* One member per row on very small screens */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>About Our Library</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="digital-library.html">Digital Library</a></li>
+                <li><a href="booking.html">Booking</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Welcome to Ohara Library</h2>
+            <p class="qwe">
+                At Ohara Library, we are dedicated to promoting literacy and a love of reading in our community. Our library
+                is more than just a collection of books; it's a place where people come together to learn, share, and grow.
+            </p>
+            <blockquote class="quote">“A library is not a luxury, but one of the necessities of life.” — Henry Ward Beecher</blockquote>
+        </section>
+
+        <section>
+            <h2>Our Mission</h2>
+            <p class="qwe">
+                Our mission is to provide access to a diverse range of resources and to foster a welcoming environment for
+                all members of the community. We strive to support lifelong learning through our extensive collections,
+                programs, and services.
+            </p>
+        </section>
+
+        <section>
+            <h2>Meet Our Team</h2>
+            <div class="team-section">
+                <div class="team-member">
+                    <img src="Images/wallpaperflare.com_wallpaper (28).jpg" alt="Rohit Singh">
+                    <h3>Rohit Singh</h3>
+                    <p>Owner</p>
+                    <p>
+                        Rohit is passionate about literature and committed to providing exceptional service to our patrons. With
+                        a background in library science, he leads our team in creating a supportive environment for learning and
+                        exploration.</p>
+                </div>
+
+                <div class="team-member">
+                    <img src="Images/" alt="Divya">
+                    <h3>Divya</h3>
+                    <p>Secretary</p>
+                    <p>Divya ensures smooth operations within the library, handling administrative tasks and fostering community relationships.</p>
+                </div>
+
+                <div class="team-member">
+                    <img src="Images/" alt="Ayan">
+                    <h3>Ayan</h3>
+                    <p>Manager</p>
+                    <p>Ayan oversees daily activities and programs, ensuring our patrons have the best possible library experience.</p>
+                </div>
+
+                <div class="team-member">
+                    <img src="Images/" alt="Harsh">
+                    <h3>Harsh</h3>
+                    <p>Chaprasi</p>
+                    <p>Harsh is our dedicated support staff, ensuring the library remains a clean and welcoming space for everyone.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+          <!-- Footer Sections -->
+          <div class="footer-content">
+            <!-- Quick Links Section -->
+            <div class="footer-links">
+              <h3>Quick Links</h3>
+              <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="digital-library.html">Digital Library</a></li>
+                <li><a href="Booking.html">Booking</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </div>
+    
+            <!-- Contact Information Section -->
+            <div class="footer-contact">
+              <h3>Contact Information</h3>
+              <p>Email: <a href="mailto:ohara@onepiece.in">ohara@onepiece.in</a></p>
+              <p>Phone: <a href="tel:+91798415XXXX">+91798415XXXX </a></p>
+              <p>Address: Delhi-GT Road ,Phagwara, Jalandhar,Punjab </p>
+            </div>
+    
+            <!-- Social Media Section -->
+            <div class="footer-social">
+              <h3>Follow Us</h3>
+              <div class="social-icons">
+                <a href="https://facebook.com" target="_blank"><img src="Images/facebook_icon_137647.png"
+                    alt="Facebook"></a>
+                <a href="https://twitter.com" target="_blank"><img src="Images/twitter.png" alt="Twitter"></a>
+                <a href="https://instagram.com" target="_blank"><img src="Images/instagram-black_100099.png"
+                    alt="Instagram"></a>
+                <a href="https://youtube.com" target="_blank"><img src="Images/youtube.png" alt="Instagram"></a>
+              </div>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <p>© 2024 <a href="home.html">Ohara Library</a>. All rights reserved.</p>
+          </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
